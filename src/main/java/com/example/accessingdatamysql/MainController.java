@@ -21,11 +21,11 @@ public class MainController {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 
-		User n = new User();
-		n.setName(name);
-		n.setEmail(email);
-		userRepository.save(n);
-		return "Saved";
+		User n = new User(); // Create a new user object
+		n.setName(name); // Set name field
+		n.setEmail(email); // Set email field
+		userRepository.save(n); // Write the user record to database
+		return "Saved"; // Send response to client
 	}
 
 	@GetMapping(path="/all")
